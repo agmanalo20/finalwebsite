@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    background-color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.btn-outline {
+    border: 2px solid #68A168;
+    padding: 5px;
+}
+
+.header img {
+    align-items: left;
+    width: 280px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: larger;
+    color: #68A168;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.headerbanner {
+    margin: 0;
+    padding: 0;
+}
+
+.headerbanner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/basic.ss-mainimg-bg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.image-box {
+    border: 2px solid #68A168;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    text-align: center;
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+}
+
+.image-caption {
+    background-color: #68A168;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.main2 {
+    margin: 0;
+    padding: 0;
+}
+
+.main2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #68A168;
+}
+
+.footer img {
+    width: 15%;
+    height: auto;
+}
+
+.offcanvas-body a {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #68A168;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.offcanvas-body a:hover {
+    text-decoration: none;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #68A168;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before, .nav-link.active:hover::before {
+    width: 100%;
+    visibility: visible;
+}
